@@ -106,30 +106,30 @@ git hist</pre>
 <pre class="sample">$ git checkout greet
 Already on 'greet'
 $ git hist
-*   59db27c 2018-08-19 | Merged master fixed conflict. (HEAD -&gt; greet) [Jim Weirich]
+*   c8c7c1d 2018-08-19 | Merged master fixed conflict. (HEAD -&gt; greet) [Jim Weirich]
 |\  
-| * 8cd3903 2018-08-19 | Made interactive (master) [Jim Weirich]
-* |   d099e6f 2018-08-19 | Merge branch 'master' into greet [Jim Weirich]
+| * c076f9c 2018-08-19 | Made interactive (master) [Jim Weirich]
+* |   d0adac9 2018-08-19 | Merge branch 'master' into greet [Jim Weirich]
 |\ \  
 | |/  
-| * ad84c99 2018-08-19 | Added README [Jim Weirich]
-* | b975a8a 2018-08-19 | Updated Rakefile [Jim Weirich]
-* | 47abfc3 2018-08-19 | Hello uses Greeter [Jim Weirich]
-* | ad17cd0 2018-08-19 | Added greeter class [Jim Weirich]
+| * a525595 2018-08-19 | Added README [Jim Weirich]
+* | c0e2994 2018-08-19 | Updated Rakefile [Jim Weirich]
+* | 6ae9aed 2018-08-19 | Hello uses Greeter [Jim Weirich]
+* | d012cc3 2018-08-19 | Added greeter class [Jim Weirich]
 |/  
-* f5a4fd2 2018-08-19 | Added a Rakefile. [Jim Weirich]
-* 888a048 2018-08-19 | Moved hello.rb to lib [Jim Weirich]
-* 6df50c2 2018-08-19 | Add an author/email comment [Jim Weirich]
-* edd4435 2018-08-19 | Added a comment (tag: v1) [Jim Weirich]
-* 6dc6c8f 2018-08-19 | Added a default value (tag: v1-beta) [Jim Weirich]
-* 43ad4e8 2018-08-19 | Using ARGV [Jim Weirich]
-* aab8563 2018-08-19 | First Commit [Jim Weirich]</pre>
+* 3d0432c 2018-08-19 | Added a Rakefile. [Jim Weirich]
+* f83a537 2018-08-19 | Moved hello.rb to lib [Jim Weirich]
+* b94cd6e 2018-08-19 | Add an author/email comment [Jim Weirich]
+* 1762a40 2018-08-19 | Added a comment (tag: v1) [Jim Weirich]
+* e454188 2018-08-19 | Added a default value (tag: v1-beta) [Jim Weirich]
+* 50725fd 2018-08-19 | Using ARGV [Jim Weirich]
+* 48a7e0b 2018-08-19 | First Commit [Jim Weirich]</pre>
 <p>That&#8217;s a bit hard to read, but looking at the data we see that the &#8220;Updated Rakefile&#8221; commit was the last commit on the greet branch before merging.  Let&#8217;s reset the greet branch to that commit.</p>
 <h3><b>Execute:</b></h3>
 <pre class="instructions">git reset --hard &lt;hash&gt;</pre>
 <h3><b>Output:</b></h3>
-<pre class="sample">$ git reset --hard b975a8a
-HEAD is now at b975a8a Updated Rakefile
+<pre class="sample">$ git reset --hard c0e2994
+HEAD is now at c0e2994 Updated Rakefile
 </pre>
 <h2>Check the branch.</h2>
 <p>Look at the log for the greet branch.  We no longer have the merge commits in its history.</p>
@@ -137,19 +137,19 @@ HEAD is now at b975a8a Updated Rakefile
 <pre class="instructions">git hist --all</pre>
 <h3><b>Output:</b></h3>
 <pre class="sample">$ git hist --all
-* b975a8a 2018-08-19 | Updated Rakefile (HEAD -&gt; greet) [Jim Weirich]
-* 47abfc3 2018-08-19 | Hello uses Greeter [Jim Weirich]
-* ad17cd0 2018-08-19 | Added greeter class [Jim Weirich]
-| * 8cd3903 2018-08-19 | Made interactive (master) [Jim Weirich]
-| * ad84c99 2018-08-19 | Added README [Jim Weirich]
+* c0e2994 2018-08-19 | Updated Rakefile (HEAD -&gt; greet) [Jim Weirich]
+* 6ae9aed 2018-08-19 | Hello uses Greeter [Jim Weirich]
+* d012cc3 2018-08-19 | Added greeter class [Jim Weirich]
+| * c076f9c 2018-08-19 | Made interactive (master) [Jim Weirich]
+| * a525595 2018-08-19 | Added README [Jim Weirich]
 |/  
-* f5a4fd2 2018-08-19 | Added a Rakefile. [Jim Weirich]
-* 888a048 2018-08-19 | Moved hello.rb to lib [Jim Weirich]
-* 6df50c2 2018-08-19 | Add an author/email comment [Jim Weirich]
-* edd4435 2018-08-19 | Added a comment (tag: v1) [Jim Weirich]
-* 6dc6c8f 2018-08-19 | Added a default value (tag: v1-beta) [Jim Weirich]
-* 43ad4e8 2018-08-19 | Using ARGV [Jim Weirich]
-* aab8563 2018-08-19 | First Commit [Jim Weirich]</pre>
+* 3d0432c 2018-08-19 | Added a Rakefile. [Jim Weirich]
+* f83a537 2018-08-19 | Moved hello.rb to lib [Jim Weirich]
+* b94cd6e 2018-08-19 | Add an author/email comment [Jim Weirich]
+* 1762a40 2018-08-19 | Added a comment (tag: v1) [Jim Weirich]
+* e454188 2018-08-19 | Added a default value (tag: v1-beta) [Jim Weirich]
+* 50725fd 2018-08-19 | Using ARGV [Jim Weirich]
+* 48a7e0b 2018-08-19 | First Commit [Jim Weirich]</pre>
       <nav class="foot-navigation">
       <a href="lab_31.html">
       <svg version="1.1" width="36" height="36" viewBox="0 0 36 36" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M27.66,15.61,18,6,8.34,15.61A1,1,0,1,0,9.75,17L17,9.81V28.94a1,1,0,1,0,2,0V9.81L26.25,17a1,1,0,0,0,1.41-1.42Z"></path></svg>

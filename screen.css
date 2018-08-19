@@ -219,18 +219,18 @@ code {
 h2 {
   padding-top: 1rem;
   color: blue;
-  font-size: 2.25rem;
+  font-size: 1.75rem;
   counter-increment: content-heading-counter;
 }
 
 h2::before {
   display: inline-block;
-  width: 3.25rem;
-  height: 3.25rem;
-  margin-right: 0.9rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  margin-right: 0.7rem;
   border: 1px solid blue;
-  border-radius: 3rem;
-  line-height: 3rem;
+  border-radius: 2rem;
+  line-height: 2.6rem;
   text-align: center;
   color: blue;
   background: #fff;

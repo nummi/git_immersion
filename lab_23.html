@@ -104,7 +104,7 @@
 <p>This should show the latest commit made in the repository.  The SHA1 hash on your system is probably different that what is on mine, but you should see something like this.</p>
 <h3><b>Output:</b></h3>
 <pre class="sample">$ git hist --max-count=1
-* 3d0432c 2018-08-19 | Added a Rakefile. (HEAD -&gt; master) [Jim Weirich]</pre>
+* ec2eddf 2018-08-19 | Added a Rakefile. (HEAD -&gt; master) [Jim Weirich]</pre>
 <h2>Dumping the Latest Commit</h2>
 <p>Using the SHA1 hash from the commit listed above &#8230;</p>
 <h3><b>Execute:</b></h3>
@@ -112,13 +112,13 @@
 git cat-file -p &lt;hash&gt;</pre>
 <p>Here&#8217;s my output &#8230;</p>
 <h3><b>Output:</b></h3>
-<pre class="sample">$ git cat-file -t 3d0432c
+<pre class="sample">$ git cat-file -t ec2eddf
 commit
-$ git cat-file -p 3d0432c
+$ git cat-file -p ec2eddf
 tree 096b74c56bfc6b40e754fc0725b8c70b2038b91e
-parent f83a5372594e770082cca841f7c158ece807d602
-author Jim Weirich &lt;jim (at) edgecase.com&gt; 1534700687 -0700
-committer Jim Weirich &lt;jim (at) edgecase.com&gt; 1534700687 -0700
+parent b86a00b823e83ae0481bbc2ec0baa8bbd74d1e96
+author Jim Weirich &lt;jim (at) edgecase.com&gt; 1534700885 -0700
+committer Jim Weirich &lt;jim (at) edgecase.com&gt; 1534700885 -0700
 
 Added a Rakefile.
 </pre>

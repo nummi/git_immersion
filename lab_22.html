@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>Lab 22 - Git Immersion</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -112,9 +112,9 @@ MERGE_RR	description	info		refs
 <pre class="instructions">ls -C .git/objects</pre>
 <h3><b>Output:</b></h3>
 <pre class="sample">$ ls -C .git/objects
-09	24	43	59	6b	7b	9f	c3	e4	pack
-11	27	45	65	73	97	af	c4	e7
-1e	28	58	69	78	9c	b5	d6	info
+09	27	51	6b	80	9c	b5	e4	f5
+11	28	59	6d	88	aa	c4	e7	info
+24	43	69	78	97	af	d4	ed	pack
 </pre>
 <p>You should see a bunch of directories with 2 letter names.  The directory names are the first two letters of the sha1 hash of the object stored in git.</p>
 <h2>Deeper into the Object Store</h2>
@@ -158,7 +158,7 @@ $ ls .git/refs/tags
 v1
 v1-beta
 $ cat .git/refs/tags/v1
-58c1b9b2ac5ccea768d2f27357943093b9889da0
+edd44354504054bbba0fe47d81b09c85f390d9b9
 </pre>
 <p>You should recognize the files in the tags subdirectory.  Each file corresponds to a tag you created with the <code>git tag</code> command earlier. Its content is just the hash of the commit tied to the tag.</p>
 <p>The heads directory is similar, but is used for branches rather than tags.  We only have one branch at the moment, so all you will see is master in this directory.</p>

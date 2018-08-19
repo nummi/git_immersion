@@ -22,7 +22,7 @@ p {
 }
 
 h1 + p em {
-  font-family: var(--font-monospace);
+  font-family: 'SF Mono', 'Roboto Mono', courier, 'courier new', monospace;
   font-size: 24px;
   font-style: normal;
   line-height: 160%;
@@ -40,7 +40,7 @@ hr {
 }
 
 a {
-  color: var(--color-blue);
+  color: blue;
 }
 
 ul {
@@ -54,9 +54,9 @@ ul {
   padding: 12px 30px;
   border-radius: 3px;
   color: #fff;
-  font-family: var(--font-monospace);
+  font-family: 'SF Mono', 'Roboto Mono', courier, 'courier new', monospace;
   text-decoration: none;
-  background: var(--color-blue);
+  background: blue;
 }
 
 .footer {

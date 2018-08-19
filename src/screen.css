@@ -25,7 +25,7 @@
   position: relative;
   overflow: auto;
   padding: 0;
-  background-color: var(--color-background-index);
+  background-color: #eee;
   counter-reset: nav-counter;
 }
 
@@ -54,7 +54,7 @@
     padding: 0.5rem 2rem;
     color: #333;
     font-size: 1.0rem;
-    font-family: var(--font-monospace);
+    font-family: 'SF Mono', 'Roboto Mono', courier, 'courier new', monospace;
     line-height: 1.2;
     text-decoration: none;
   }
@@ -67,7 +67,7 @@
     opacity: 0.5;
     text-transform: uppercase;
     font-size: 12px;
-    font-family: var(--font-sans-serif);
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica', 'Segui UI', 'Roboto', sans-serif;
   }
 
   #index nav a.active::after {
@@ -80,12 +80,12 @@
     height: 10px;
     border-radius: 10px;
     margin-top: -5px;
-    background: var(--color-blue);
+    background: blue;
   }
 
   #index nav a:hover {
     color: #fff;
-    background: var(--color-blue);
+    background: blue;
   }
 
   #index nav a:hover::before {
@@ -104,7 +104,7 @@
     margin: 0;
     padding: 4rem 0 2rem 0;
     z-index: 1;
-    background-color: var(--color-background-index);
+    background-color: #eee;
   }
 
   #index .link-home a {
@@ -179,7 +179,7 @@ h1 {
   border-radius: 5px;
   padding: 1rem;
   font-size: 14px;
-  font-family: var(--font-monospace);
+  font-family: 'SF Mono', 'Roboto Mono', courier, 'courier new', monospace;
   line-height: 1.35;
 }
 
@@ -200,13 +200,13 @@ h1 {
 code {
   border-radius: 3px;
   padding: 1px 3px;
-  font-family: var(--font-monospace);
-  background: var(--color-background-index);
+  font-family: 'SF Mono', 'Roboto Mono', courier, 'courier new', monospace;
+  background: #eee;
 }
 
 .note {
   display: block;
-  min-height: 36px;
+  min-height: 70px;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   padding: 1rem 0 1rem 40px;
@@ -218,7 +218,7 @@ code {
 
 h2 {
   padding-top: 1rem;
-  color: var(--color-blue);
+  color: blue;
   font-size: 1.75rem;
   counter-increment: content-heading-counter;
 }
@@ -228,11 +228,11 @@ h2::before {
   width: 2.75rem;
   height: 2.75rem;
   margin-right: 0.7rem;
-  border: 1px solid var(--color-blue);
+  border: 1px solid blue;
   border-radius: 2rem;
   line-height: 2.6rem;
   text-align: center;
-  color: var(--color-blue);
+  color: blue;
   background: #fff;
   content: counter(content-heading-counter);
 }
@@ -249,7 +249,7 @@ h3 {
 }
 
 h3 em {
-  font-family: var(--font-monospace);
+  font-family: 'SF Mono', 'Roboto Mono', courier, 'courier new', monospace;
   font-size: 110%;
   font-style: normal;
   text-transform: none;
@@ -300,7 +300,7 @@ h3 b {
 }
 
 .instructions pre.clickable:hover {
-  background: var(--color-background-index);
+  background: #eee;
 }
 
 
@@ -333,7 +333,7 @@ h3 b {
 
 .foot-navigation a:hover {
   color: #fff;
-  background: var(--color-blue);
+  background: blue;
 }
 
 .foot-navigation a:hover svg path {

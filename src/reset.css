@@ -1,8 +1,8 @@
-:root {
-  --font-sans-serif: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica', 'Segui UI', 'Roboto', sans-serif;
-  --font-monospace: 'SF Mono', 'Roboto Mono', courier, 'courier new', monospace;
-  --color-background-index: #eee;
-  --color-blue: #00f;
+.sans-serif {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica', 'Segui UI', 'Roboto', sans-serif;
+}
+.monospace {
+  font-family: 'SF Mono', 'Roboto Mono', courier, 'courier new', monospace;
 }
 
 html { box-sizing: border-box; }
@@ -15,7 +15,7 @@ html { box-sizing: border-box; }
 
 body {
   margin: 0;
-  font-family: var(--font-sans-serif);
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica', 'Segui UI', 'Roboto', sans-serif;
 }
 
 h1 {

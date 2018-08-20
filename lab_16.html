@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <title>Lab 16 - Git Immersion</title>
+  <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" media="screen" href="reset.css"> 
@@ -117,7 +118,7 @@ git commit -m "Oops, we didn't want this commit"</pre>
 <p>This will pop you into the editor.  You can edit the default commit message or leave it as is.  Save and close the file. You should see &#8230;</p>
 <h3><b>Output:</b></h3>
 <pre class="sample">$ git revert HEAD --no-edit
-[master 1116731] Revert "Oops, we didn't want this commit"
+[master 7e93625] Revert "Oops, we didn't want this commit"
  1 file changed, 1 insertion(+), 1 deletion(-)
 </pre>
 <p>Since we were undoing the very last commit we made, we were able to use <code>HEAD</code> as the argument to revert.  We can revert any arbitrary commit earlier in history by simply specifying its hash value.</p>
@@ -128,12 +129,12 @@ git commit -m "Oops, we didn't want this commit"</pre>
 <pre class="instructions">git hist</pre>
 <h3><b>Output:</b></h3>
 <pre class="sample">$ git hist
-* 1116731 2018-08-19 | Revert "Oops, we didn't want this commit" (HEAD -&gt; master) [Jim Weirich]
-* 5986011 2018-08-19 | Oops, we didn't want this commit [Jim Weirich]
-* e61b619 2018-08-19 | Added a comment (tag: v1) [Jim Weirich]
-* 78dac8d 2018-08-19 | Added a default value (tag: v1-beta) [Jim Weirich]
-* d826fea 2018-08-19 | Using ARGV [Jim Weirich]
-* f77df87 2018-08-19 | First Commit [Jim Weirich]</pre>
+* 7e93625 2018-08-20 | Revert "Oops, we didn't want this commit" (HEAD -&gt; master) [Jim Weirich]
+* 10fe742 2018-08-20 | Oops, we didn't want this commit [Jim Weirich]
+* 513fbdb 2018-08-20 | Added a comment (tag: v1) [Jim Weirich]
+* a240271 2018-08-20 | Added a default value (tag: v1-beta) [Jim Weirich]
+* 28e8da6 2018-08-20 | Using ARGV [Jim Weirich]
+* dd4bd3a 2018-08-20 | First Commit [Jim Weirich]</pre>
 <p>This technique will work with any commit (although you may have to resolve conflicts).  It is safe to use even on branches that are publicly shared on remote repositories.</p>
 <h2>Up Next</h2>
 <p>Next, let&#8217;s look at a technique that can be used to remove the most recent commits from the repository history.</p>

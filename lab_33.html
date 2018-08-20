@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <title>Lab 33 - Git Immersion</title>
+  <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" media="screen" href="reset.css"> 
@@ -103,15 +104,15 @@
 git hist</pre>
 <h3><b>Output:</b></h3>
 <pre class="sample">$ git hist
-* 1fbef83 2018-08-19 | Made interactive (HEAD -&gt; master) [Jim Weirich]
-* db8e864 2018-08-19 | Added README [Jim Weirich]
-* ec2eddf 2018-08-19 | Added a Rakefile. [Jim Weirich]
-* b86a00b 2018-08-19 | Moved hello.rb to lib [Jim Weirich]
-* dcbf17c 2018-08-19 | Add an author/email comment [Jim Weirich]
-* e61b619 2018-08-19 | Added a comment (tag: v1) [Jim Weirich]
-* 78dac8d 2018-08-19 | Added a default value (tag: v1-beta) [Jim Weirich]
-* d826fea 2018-08-19 | Using ARGV [Jim Weirich]
-* f77df87 2018-08-19 | First Commit [Jim Weirich]</pre>
+* 54fc386 2018-08-20 | Made interactive (HEAD -&gt; master) [Jim Weirich]
+* 447799b 2018-08-20 | Added README [Jim Weirich]
+* 070b9c2 2018-08-20 | Added a Rakefile. [Jim Weirich]
+* b1dc47f 2018-08-20 | Moved hello.rb to lib [Jim Weirich]
+* c6f7aad 2018-08-20 | Add an author/email comment [Jim Weirich]
+* 513fbdb 2018-08-20 | Added a comment (tag: v1) [Jim Weirich]
+* a240271 2018-08-20 | Added a default value (tag: v1-beta) [Jim Weirich]
+* 28e8da6 2018-08-20 | Using ARGV [Jim Weirich]
+* dd4bd3a 2018-08-20 | First Commit [Jim Weirich]</pre>
 <p>The &#8216;Added <span class="caps">README</span>&#8217; commit is the one directly before the conflicting interactive mode.  We will reset the master branch to &#8216;Added <span class="caps">README</span>&#8217; branch.</p>
 <h3><b>Execute:</b></h3>
 <pre class="instructions">git reset --hard &lt;hash&gt;
@@ -119,18 +120,18 @@ git hist --all</pre>
 <p>Review the log.  It should look like the repository has been wound back in time to the point before we merged anything.</p>
 <h3><b>Output:</b></h3>
 <pre class="sample">$ git hist --all
-* 81a372d 2018-08-19 | Updated Rakefile (greet) [Jim Weirich]
-* 4d88b95 2018-08-19 | Hello uses Greeter [Jim Weirich]
-* 68937a1 2018-08-19 | Added greeter class [Jim Weirich]
-| * db8e864 2018-08-19 | Added README (HEAD -&gt; master) [Jim Weirich]
+* 6fa2446 2018-08-20 | Updated Rakefile (greet) [Jim Weirich]
+* 1aac1c1 2018-08-20 | Hello uses Greeter [Jim Weirich]
+* f1d1ba5 2018-08-20 | Added greeter class [Jim Weirich]
+| * 447799b 2018-08-20 | Added README (HEAD -&gt; master) [Jim Weirich]
 |/  
-* ec2eddf 2018-08-19 | Added a Rakefile. [Jim Weirich]
-* b86a00b 2018-08-19 | Moved hello.rb to lib [Jim Weirich]
-* dcbf17c 2018-08-19 | Add an author/email comment [Jim Weirich]
-* e61b619 2018-08-19 | Added a comment (tag: v1) [Jim Weirich]
-* 78dac8d 2018-08-19 | Added a default value (tag: v1-beta) [Jim Weirich]
-* d826fea 2018-08-19 | Using ARGV [Jim Weirich]
-* f77df87 2018-08-19 | First Commit [Jim Weirich]</pre>
+* 070b9c2 2018-08-20 | Added a Rakefile. [Jim Weirich]
+* b1dc47f 2018-08-20 | Moved hello.rb to lib [Jim Weirich]
+* c6f7aad 2018-08-20 | Add an author/email comment [Jim Weirich]
+* 513fbdb 2018-08-20 | Added a comment (tag: v1) [Jim Weirich]
+* a240271 2018-08-20 | Added a default value (tag: v1-beta) [Jim Weirich]
+* 28e8da6 2018-08-20 | Using ARGV [Jim Weirich]
+* dd4bd3a 2018-08-20 | First Commit [Jim Weirich]</pre>
       <nav class="foot-navigation">
       <a href="lab_32.html">
       <svg version="1.1" width="36" height="36" viewBox="0 0 36 36" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M27.66,15.61,18,6,8.34,15.61A1,1,0,1,0,9.75,17L17,9.81V28.94a1,1,0,1,0,2,0V9.81L26.25,17a1,1,0,0,0,1.41-1.42Z"></path></svg>

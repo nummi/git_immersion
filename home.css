@@ -22,7 +22,7 @@ p {
 }
 
 h1 + p em {
-  font-family: 'SF Mono', 'Roboto Mono', courier, 'courier new', monospace;
+  font-family: "SF Mono", "SFMono-Regular", "Roboto Mono", Consolas, "Liberation Mono", Menlo, Courier, monospace;
   font-size: 24px;
   font-style: normal;
   line-height: 160%;
@@ -54,7 +54,7 @@ ul {
   padding: 12px 30px;
   border-radius: 3px;
   color: #fff;
-  font-family: 'SF Mono', 'Roboto Mono', courier, 'courier new', monospace;
+  font-family: "SF Mono", "SFMono-Regular", "Roboto Mono", Consolas, "Liberation Mono", Menlo, Courier, monospace;
   text-decoration: none;
   background: blue;
 }

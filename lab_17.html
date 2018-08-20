@@ -113,12 +113,12 @@
 <pre class="instructions">git hist</pre>
 <h3><b>Output:</b></h3>
 <pre class="sample">$ git hist
-* 7e93625 2018-08-20 | Revert "Oops, we didn't want this commit" (HEAD -&gt; master) [Jim Weirich]
-* 10fe742 2018-08-20 | Oops, we didn't want this commit [Jim Weirich]
-* 513fbdb 2018-08-20 | Added a comment (tag: v1) [Jim Weirich]
-* a240271 2018-08-20 | Added a default value (tag: v1-beta) [Jim Weirich]
-* 28e8da6 2018-08-20 | Using ARGV [Jim Weirich]
-* dd4bd3a 2018-08-20 | First Commit [Jim Weirich]</pre>
+* 6de65fb 2018-08-20 | Revert "Oops, we didn't want this commit" (HEAD -&gt; master) [Jim Weirich]
+* ac7520d 2018-08-20 | Oops, we didn't want this commit [Jim Weirich]
+* f181d98 2018-08-20 | Added a comment (tag: v1) [Jim Weirich]
+* 7b63d28 2018-08-20 | Added a default value (tag: v1-beta) [Jim Weirich]
+* 2646e80 2018-08-20 | Using ARGV [Jim Weirich]
+* f50f5fc 2018-08-20 | First Commit [Jim Weirich]</pre>
 <p>We see that we have an &#8220;Oops&#8221; commit and a &#8220;Revert Oops&#8221; commit as the last two commits made in this branch.  Let&#8217;s remove them using reset.</p>
 <h2>First, Mark this Branch</h2>
 <p>But before we remove the commits, let&#8217;s mark the latest commit with a tag so we can find it again.</p>
@@ -131,12 +131,12 @@
 git hist</pre>
 <h3><b>Output:</b></h3>
 <pre class="sample">$ git reset --hard v1
-HEAD is now at 513fbdb Added a comment
+HEAD is now at f181d98 Added a comment
 $ git hist
-* 513fbdb 2018-08-20 | Added a comment (HEAD -&gt; master, tag: v1) [Jim Weirich]
-* a240271 2018-08-20 | Added a default value (tag: v1-beta) [Jim Weirich]
-* 28e8da6 2018-08-20 | Using ARGV [Jim Weirich]
-* dd4bd3a 2018-08-20 | First Commit [Jim Weirich]</pre>
+* f181d98 2018-08-20 | Added a comment (HEAD -&gt; master, tag: v1) [Jim Weirich]
+* 7b63d28 2018-08-20 | Added a default value (tag: v1-beta) [Jim Weirich]
+* 2646e80 2018-08-20 | Using ARGV [Jim Weirich]
+* f50f5fc 2018-08-20 | First Commit [Jim Weirich]</pre>
 <p>Our master branch now points to the v1 commit and the Oops commit and the Revert Oops commit are no longer in the branch.  The <code>--hard</code> parameter indicates that the working directory should be updated to be consistent with the new branch head.</p>
 <h2>Nothing is Ever Lost</h2>
 <p>But what happened to the bad commits?  It turns out that the commits are still in the repository.  In fact, we can still reference them.  Remember that at the beginning of this lab we tagged the reverting commit with the tag &#8220;oops&#8221;.  Let&#8217;s look at <em>all</em> the commits.</p>
@@ -144,12 +144,12 @@ $ git hist
 <pre class="instructions">git hist --all</pre>
 <h3><b>Output:</b></h3>
 <pre class="sample">$ git hist --all
-* 7e93625 2018-08-20 | Revert "Oops, we didn't want this commit" (tag: oops) [Jim Weirich]
-* 10fe742 2018-08-20 | Oops, we didn't want this commit [Jim Weirich]
-* 513fbdb 2018-08-20 | Added a comment (HEAD -&gt; master, tag: v1) [Jim Weirich]
-* a240271 2018-08-20 | Added a default value (tag: v1-beta) [Jim Weirich]
-* 28e8da6 2018-08-20 | Using ARGV [Jim Weirich]
-* dd4bd3a 2018-08-20 | First Commit [Jim Weirich]</pre>
+* 6de65fb 2018-08-20 | Revert "Oops, we didn't want this commit" (tag: oops) [Jim Weirich]
+* ac7520d 2018-08-20 | Oops, we didn't want this commit [Jim Weirich]
+* f181d98 2018-08-20 | Added a comment (HEAD -&gt; master, tag: v1) [Jim Weirich]
+* 7b63d28 2018-08-20 | Added a default value (tag: v1-beta) [Jim Weirich]
+* 2646e80 2018-08-20 | Using ARGV [Jim Weirich]
+* f50f5fc 2018-08-20 | First Commit [Jim Weirich]</pre>
 <p>Here we see that the bad commits haven&#8217;t disappeared.  They are still in the repository.  It&#8217;s just that they are no longer listed in the master branch.  If we hadn&#8217;t tagged them, they would still be in the repository, but there would be no way to reference them other than using their hash names.  Commits that are unreferenced remain in the repository until the system runs the garbage collection software.</p>
 <h2>Dangers of Reset</h2>
 <p>Resets on local branches are generally safe.  Any &#8220;accidents&#8221; can usually be recovered from by just resetting again with the desired commit.</p>

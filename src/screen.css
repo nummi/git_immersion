@@ -223,20 +223,6 @@ h2 {
   counter-increment: content-heading-counter;
 }
 
-h2::before {
-  display: inline-block;
-  width: 2.75rem;
-  height: 2.75rem;
-  margin-right: 0.7rem;
-  border: 1px solid blue;
-  border-radius: 2rem;
-  line-height: 2.6rem;
-  text-align: center;
-  color: blue;
-  background: #fff;
-  content: counter(content-heading-counter);
-}
-
 h2 + ul {
   padding-left: 0;
   list-style-type: circle;
@@ -360,7 +346,16 @@ h3 b {
 /* Desktop Layout Modifiers
 ------------------------------------------------------------------- */
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 950px) {
+  #content {
+    padding-left: 5.5rem;
+  }
+
+  .foot-navigation {
+    width: calc(100% + 7.5rem);
+    margin-left: -5.5rem;
+  }
+
   .layout {
     display: flex;
     height: 100vh;
@@ -378,5 +373,26 @@ h3 b {
   
   .link-menu {
     display: none;
+  }
+
+  h2 {
+    position: relative;
+    font-size: 2.25rem;
+  }
+
+  h2::before {
+    position: absolute;
+    left: -3.5rem;
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-top: 0.05rem;
+    border-radius: 2rem;
+    line-height: 2.3rem;
+    text-align: center;
+    color: #fff;
+    font-size: 1.5rem;
+    background: blue;
+    content: counter(content-heading-counter);
   }
 }

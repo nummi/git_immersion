@@ -105,20 +105,20 @@ git hist --all</pre>
 <h3><b>Output:</b></h3>
 <pre class="sample">$ git fetch
 From /Users/jerrynummi/Projects/git_immersion/auto/hello
-   94a2c8d..dda917f  master     -&gt; origin/master
+   082b55e..1e7ed79  master     -&gt; origin/master
 $ git hist --all
-* dda917f 2018-08-20 | Changed README in original repo (origin/master, origin/HEAD) [Jim Weirich]
-* 94a2c8d 2018-08-20 | Updated Rakefile (HEAD -&gt; master, origin/greet) [Jim Weirich]
-* d71d871 2018-08-20 | Hello uses Greeter [Jim Weirich]
-* 25a7c5c 2018-08-20 | Added greeter class [Jim Weirich]
-* 2b3ba83 2018-08-20 | Added README [Jim Weirich]
-* b5381f7 2018-08-20 | Added a Rakefile. [Jim Weirich]
-* 65008a3 2018-08-20 | Moved hello.rb to lib [Jim Weirich]
-* 76faf03 2018-08-20 | Add an author/email comment [Jim Weirich]
-* f181d98 2018-08-20 | Added a comment (tag: v1) [Jim Weirich]
-* 7b63d28 2018-08-20 | Added a default value (tag: v1-beta) [Jim Weirich]
-* 2646e80 2018-08-20 | Using ARGV [Jim Weirich]
-* f50f5fc 2018-08-20 | First Commit [Jim Weirich]</pre>
+* 1e7ed79 2018-08-20 | Changed README in original repo (origin/master, origin/HEAD) [Jim Weirich]
+* 082b55e 2018-08-20 | Updated Rakefile (HEAD -&gt; master, origin/greet) [Jim Weirich]
+* 7b3a8ce 2018-08-20 | Hello uses Greeter [Jim Weirich]
+* 6d79071 2018-08-20 | Added greeter class [Jim Weirich]
+* 51beac0 2018-08-20 | Added README [Jim Weirich]
+* a3d2ca9 2018-08-20 | Added a Rakefile. [Jim Weirich]
+* 5b49d2b 2018-08-20 | Moved hello.rb to lib [Jim Weirich]
+* aaffad7 2018-08-20 | Add an author/email comment [Jim Weirich]
+* 64bc643 2018-08-20 | Added a comment (tag: v1) [Jim Weirich]
+* 3a51456 2018-08-20 | Added a default value (tag: v1-beta) [Jim Weirich]
+* f3c7796 2018-08-20 | Using ARGV [Jim Weirich]
+* 649c22e 2018-08-20 | First Commit [Jim Weirich]</pre>
 <p>At this point the repository has all the commits from the original repository, but they are not integrated into the the cloned repository&#8217;s local branches.</p>
 <p>Find the &#8220;Changed <span class="caps">README</span> in original repo&#8221; commit in the history above.  Notice that the commit includes &#8220;origin/master&#8221; and &#8220;origin/<span class="caps">HEAD</span>&#8221;.</p>
 <p>Now look at the &#8220;Updated Rakefile&#8221; commit.  You will see that it the local master branch points to this commit, not to the new commit that we just fetched.</p>

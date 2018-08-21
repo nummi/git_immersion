@@ -1,39 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Lab 12 - Git Immersion</title>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" media="screen" href="reset.css"> 
-  <link rel="stylesheet" media="screen" href="screen.css"> 
-  <script type="text/javascript">
-   var _gaq = _gaq || [];
-   _gaq.push(['_setAccount', 'UA-1142510-7']);
-   _gaq.push(['_trackPageview']);
-   (function() {
-     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-   })();
-  </script>
-  <script type="text/javascript" src="UI.js"></script>
-</head>
+  <head>
+    <title>Lab 12 - Git Immersion</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A guided tour that walks through the fundamentals of Git">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" media="screen" href="reset.css"> 
+    <link rel="stylesheet" media="screen" href="screen.css"> 
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-1142510-7']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <script type="text/javascript" src="UI.js"></script>
+  </head>
 
-<body data-lab-id="12">
-  <a href="#content" tabindex="1" class="skip-to-content">
-    Skip to content
-  </a>
+  <body data-lab-id="12">
+    <a href="#content" tabindex="1" class="skip-to-content">
+      Skip to content
+    </a>
 
-  <div class="layout">
-    <div id="index">
-      <p class="link-home">
-        <a href="index.html"><span>Git Immersion</span></a>
-      </p>
-      <button class="link-menu">Menu</button>
-      <nav tabindex="0">
-        <ol>
-            <li id="lab_1_link"><a href="lab_01.html">Setup</a></li>
+    <div class="layout">
+      <div id="index">
+        <p class="link-home">
+          <a href="index.html"><span>Git Immersion</span></a>
+        </p>
+        <button class="link-menu">Menu</button>
+        <nav tabindex="0">
+          <ol>
+              <li id="lab_1_link"><a href="lab_01.html">Setup</a></li>
   <li id="lab_2_link"><a href="lab_02.html">More Setup</a></li>
   <li id="lab_3_link"><a href="lab_03.html">Create a Project</a></li>
   <li id="lab_4_link"><a href="lab_04.html">Checking Status</a></li>
@@ -87,12 +89,12 @@
   <li id="lab_52_link"><a href="lab_52.html">Advanced / Future Topics</a></li>
   <li id="lab_53_link"><a href="lab_53.html">Thank You</a></li>
 
-        </ol>
-      </nav>
-    </div>
+          </ol>
+        </nav>
+      </div>
 
-    <div id="content">
-      <h1 class="lab_title"><em>lab 12</em>  Getting Old Versions</h1>
+      <div id="content">
+        <h1 class="lab_title"><em>lab 12</em>  Getting Old Versions</h1>
 <h2>Goals</h2>
 <ul>
 	<li>Learn how to checkout any previous snapshot into the working directory.</li>
@@ -104,10 +106,10 @@
 <p class="note"><strong>Note:</strong> You did remember to define <code>hist</code> in your <code>.gitconfig</code> file, right?  If not, review the lab on aliases.</p>
 <h3><b>Output:</b></h3>
 <pre class="sample">$ git hist
-* 64bc643 2018-08-20 | Added a comment (HEAD -&gt; master) [Jim Weirich]
-* 3a51456 2018-08-20 | Added a default value [Jim Weirich]
-* f3c7796 2018-08-20 | Using ARGV [Jim Weirich]
-* 649c22e 2018-08-20 | First Commit [Jim Weirich]</pre>
+* 24422e5 2018-08-20 | Added a comment (HEAD -&gt; master) [Jim Weirich]
+* 4b31f11 2018-08-20 | Added a default value [Jim Weirich]
+* 398a1fb 2018-08-20 | Using ARGV [Jim Weirich]
+* abf3d54 2018-08-20 | First Commit [Jim Weirich]</pre>
 <p>Examine the log output and find the hash for the first commit.  It should be the last line of the <code>git hist</code> output.  Use that hash code (the first 7 characters are enough) in the command below.  Then check the contents of the hello.rb file.</p>
 <h3><b>Execute:</b></h3>
 <pre class="instructions">git checkout &lt;hash&gt;
@@ -116,8 +118,8 @@ cat hello.rb</pre>
 <p class="note"><strong>Note:</strong> Many commands depend on the hash values in the repository.  Since your hash values will vary from mine, whenever you see something like &lt;hash&gt; or &lt;treehash&gt; in the command, substitute in the proper hash value for your repository.</p>
 <p>You should see &#8230;</p>
 <h3><b>Output:</b></h3>
-<pre class="sample">$ git checkout 649c22e
-Note: checking out '649c22e'.
+<pre class="sample">$ git checkout abf3d54
+Note: checking out 'abf3d54'.
 
 You are in 'detached HEAD' state. You can look around, make experimental
 changes and commit them, and you can discard any commits you make in this
@@ -128,7 +130,7 @@ do so (now or later) by using -b with the checkout command again. Example:
 
   git checkout -b &lt;new-branch-name&gt;
 
-HEAD is now at 649c22e... First Commit
+HEAD is now at abf3d54... First Commit
 $ cat hello.rb
 puts "Hello, World"
 </pre>
@@ -141,7 +143,7 @@ cat hello.rb</pre>
 <p>You should see &#8230;</p>
 <h3><b>Output:</b></h3>
 <pre class="sample">$ git checkout master
-Previous HEAD position was 649c22e... First Commit
+Previous HEAD position was abf3d54... First Commit
 Switched to branch 'master'
 $ cat hello.rb
 # Default is "World"
@@ -150,7 +152,7 @@ name = ARGV.first || "World"
 puts "Hello, #{name}!"
 </pre>
 <p>&#8216;master&#8217; is the name of the default branch.  By checking out a branch by name, you go to the latest version of that branch.</p>
-      <nav class="foot-navigation">
+        <nav class="foot-navigation">
       <a href="lab_11.html">
       <svg version="1.1" width="36" height="36" viewBox="0 0 36 36" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M27.66,15.61,18,6,8.34,15.61A1,1,0,1,0,9.75,17L17,9.81V28.94a1,1,0,1,0,2,0V9.81L26.25,17a1,1,0,0,0,1.41-1.42Z"></path></svg>
       Previous
@@ -162,7 +164,7 @@ puts "Hello, #{name}!"
     </a>
   </nav>
 
+      </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>

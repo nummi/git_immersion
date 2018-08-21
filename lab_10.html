@@ -1,39 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Lab 10 - Git Immersion</title>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" media="screen" href="reset.css"> 
-  <link rel="stylesheet" media="screen" href="screen.css"> 
-  <script type="text/javascript">
-   var _gaq = _gaq || [];
-   _gaq.push(['_setAccount', 'UA-1142510-7']);
-   _gaq.push(['_trackPageview']);
-   (function() {
-     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-   })();
-  </script>
-  <script type="text/javascript" src="UI.js"></script>
-</head>
+  <head>
+    <title>Lab 10 - Git Immersion</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A guided tour that walks through the fundamentals of Git">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" media="screen" href="reset.css"> 
+    <link rel="stylesheet" media="screen" href="screen.css"> 
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-1142510-7']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <script type="text/javascript" src="UI.js"></script>
+  </head>
 
-<body data-lab-id="10">
-  <a href="#content" tabindex="1" class="skip-to-content">
-    Skip to content
-  </a>
+  <body data-lab-id="10">
+    <a href="#content" tabindex="1" class="skip-to-content">
+      Skip to content
+    </a>
 
-  <div class="layout">
-    <div id="index">
-      <p class="link-home">
-        <a href="index.html"><span>Git Immersion</span></a>
-      </p>
-      <button class="link-menu">Menu</button>
-      <nav tabindex="0">
-        <ol>
-            <li id="lab_1_link"><a href="lab_01.html">Setup</a></li>
+    <div class="layout">
+      <div id="index">
+        <p class="link-home">
+          <a href="index.html"><span>Git Immersion</span></a>
+        </p>
+        <button class="link-menu">Menu</button>
+        <nav tabindex="0">
+          <ol>
+              <li id="lab_1_link"><a href="lab_01.html">Setup</a></li>
   <li id="lab_2_link"><a href="lab_02.html">More Setup</a></li>
   <li id="lab_3_link"><a href="lab_03.html">Create a Project</a></li>
   <li id="lab_4_link"><a href="lab_04.html">Checking Status</a></li>
@@ -87,12 +89,12 @@
   <li id="lab_52_link"><a href="lab_52.html">Advanced / Future Topics</a></li>
   <li id="lab_53_link"><a href="lab_53.html">Thank You</a></li>
 
-        </ol>
-      </nav>
-    </div>
+          </ol>
+        </nav>
+      </div>
 
-    <div id="content">
-      <h1 class="lab_title"><em>lab 10</em>  History</h1>
+      <div id="content">
+        <h1 class="lab_title"><em>lab 10</em>  History</h1>
 <h2>Goals</h2>
 <ul>
 	<li>Learn how to view the history of the project.</li>
@@ -103,27 +105,27 @@
 <p>You should see &#8230;</p>
 <h3><b>Output:</b></h3>
 <pre class="sample">$ git log
-commit 64bc643950d252e318dfd6da8b71b939a9c43bbd
+commit 24422e51af5d57ec9888f5e1500820c5e821bd1b
 Author: Jim Weirich &lt;jim (at) edgecase.com&gt;
-Date:   Mon Aug 20 16:17:03 2018 -0700
+Date:   Mon Aug 20 19:38:57 2018 -0700
 
     Added a comment
 
-commit 3a5145636a3d5452473ce27833135bddf631263b
+commit 4b31f1103dcbd13e86e22745157e6f9469d2e0aa
 Author: Jim Weirich &lt;jim (at) edgecase.com&gt;
-Date:   Mon Aug 20 16:17:03 2018 -0700
+Date:   Mon Aug 20 19:38:57 2018 -0700
 
     Added a default value
 
-commit f3c7796ce3ce3f5619ed68484855c3962890ab83
+commit 398a1fb28bb2565b4d27bea9f6dd548dbe5562c0
 Author: Jim Weirich &lt;jim (at) edgecase.com&gt;
-Date:   Mon Aug 20 16:17:03 2018 -0700
+Date:   Mon Aug 20 19:38:56 2018 -0700
 
     Using ARGV
 
-commit 649c22e8186309d639a14a1a7077c6f41265c10c
+commit abf3d54892acb74e7ee2f93e6c82a5503e839002
 Author: Jim Weirich &lt;jim (at) edgecase.com&gt;
-Date:   Mon Aug 20 16:17:03 2018 -0700
+Date:   Mon Aug 20 19:38:56 2018 -0700
 
     First Commit
 </pre>
@@ -135,10 +137,10 @@ Date:   Mon Aug 20 16:17:03 2018 -0700
 <p>You should see &#8230;</p>
 <h3><b>Output:</b></h3>
 <pre class="sample">$ git log --pretty=oneline
-64bc643950d252e318dfd6da8b71b939a9c43bbd Added a comment
-3a5145636a3d5452473ce27833135bddf631263b Added a default value
-f3c7796ce3ce3f5619ed68484855c3962890ab83 Using ARGV
-649c22e8186309d639a14a1a7077c6f41265c10c First Commit
+24422e51af5d57ec9888f5e1500820c5e821bd1b Added a comment
+4b31f1103dcbd13e86e22745157e6f9469d2e0aa Added a default value
+398a1fb28bb2565b4d27bea9f6dd548dbe5562c0 Using ARGV
+abf3d54892acb74e7ee2f93e6c82a5503e839002 First Commit
 </pre>
 <h2>Controlling Which Entries are Displayed</h2>
 <p>There are a lot of options for selecting which entries are displayed in the log.  Play around with the following options:</p>
@@ -158,10 +160,10 @@ git log --pretty=oneline --all</pre>
 <p>It looks like this:</p>
 <h3><b>Output:</b></h3>
 <pre class="sample">$ git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
-* 64bc643 2018-08-20 | Added a comment (HEAD -&gt; master) [Jim Weirich]
-* 3a51456 2018-08-20 | Added a default value [Jim Weirich]
-* f3c7796 2018-08-20 | Using ARGV [Jim Weirich]
-* 649c22e 2018-08-20 | First Commit [Jim Weirich]</pre>
+* 24422e5 2018-08-20 | Added a comment (HEAD -&gt; master) [Jim Weirich]
+* 4b31f11 2018-08-20 | Added a default value [Jim Weirich]
+* 398a1fb 2018-08-20 | Using ARGV [Jim Weirich]
+* abf3d54 2018-08-20 | First Commit [Jim Weirich]</pre>
 <p>Let&#8217;s look at it in detail:</p>
 <ul>
 	<li><code>--pretty="..."</code> defines the format of the output.</li>
@@ -176,7 +178,7 @@ git log --pretty=oneline --all</pre>
 <p>This is a lot to type every time you want to see the log. Fortunately we will learn about git aliases in the next lab.</p>
 <h2>Other Tools</h2>
 <p>Both <code>gitx</code> (for Macs) and <code>gitk</code> (any platform) are useful in exploring log history.</p>
-      <nav class="foot-navigation">
+        <nav class="foot-navigation">
       <a href="lab_09.html">
       <svg version="1.1" width="36" height="36" viewBox="0 0 36 36" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M27.66,15.61,18,6,8.34,15.61A1,1,0,1,0,9.75,17L17,9.81V28.94a1,1,0,1,0,2,0V9.81L26.25,17a1,1,0,0,0,1.41-1.42Z"></path></svg>
       Previous
@@ -188,7 +190,7 @@ git log --pretty=oneline --all</pre>
     </a>
   </nav>
 
+      </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>

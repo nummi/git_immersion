@@ -1,39 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Lab 16 - Git Immersion</title>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" media="screen" href="reset.css"> 
-  <link rel="stylesheet" media="screen" href="screen.css"> 
-  <script type="text/javascript">
-   var _gaq = _gaq || [];
-   _gaq.push(['_setAccount', 'UA-1142510-7']);
-   _gaq.push(['_trackPageview']);
-   (function() {
-     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-   })();
-  </script>
-  <script type="text/javascript" src="UI.js"></script>
-</head>
+  <head>
+    <title>Lab 16 - Git Immersion</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A guided tour that walks through the fundamentals of Git">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" media="screen" href="reset.css"> 
+    <link rel="stylesheet" media="screen" href="screen.css"> 
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-1142510-7']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <script type="text/javascript" src="UI.js"></script>
+  </head>
 
-<body data-lab-id="16">
-  <a href="#content" tabindex="1" class="skip-to-content">
-    Skip to content
-  </a>
+  <body data-lab-id="16">
+    <a href="#content" tabindex="1" class="skip-to-content">
+      Skip to content
+    </a>
 
-  <div class="layout">
-    <div id="index">
-      <p class="link-home">
-        <a href="index.html"><span>Git Immersion</span></a>
-      </p>
-      <button class="link-menu">Menu</button>
-      <nav tabindex="0">
-        <ol>
-            <li id="lab_1_link"><a href="lab_01.html">Setup</a></li>
+    <div class="layout">
+      <div id="index">
+        <p class="link-home">
+          <a href="index.html"><span>Git Immersion</span></a>
+        </p>
+        <button class="link-menu">Menu</button>
+        <nav tabindex="0">
+          <ol>
+              <li id="lab_1_link"><a href="lab_01.html">Setup</a></li>
   <li id="lab_2_link"><a href="lab_02.html">More Setup</a></li>
   <li id="lab_3_link"><a href="lab_03.html">Create a Project</a></li>
   <li id="lab_4_link"><a href="lab_04.html">Checking Status</a></li>
@@ -87,12 +89,12 @@
   <li id="lab_52_link"><a href="lab_52.html">Advanced / Future Topics</a></li>
   <li id="lab_53_link"><a href="lab_53.html">Thank You</a></li>
 
-        </ol>
-      </nav>
-    </div>
+          </ol>
+        </nav>
+      </div>
 
-    <div id="content">
-      <h1 class="lab_title"><em>lab 16</em>  Undoing Committed Changes</h1>
+      <div id="content">
+        <h1 class="lab_title"><em>lab 16</em>  Undoing Committed Changes</h1>
 <h2>Goals</h2>
 <ul>
 	<li>Learn how to revert changes that have been committed to a local repository.</li>
@@ -118,7 +120,7 @@ git commit -m "Oops, we didn't want this commit"</pre>
 <p>This will pop you into the editor.  You can edit the default commit message or leave it as is.  Save and close the file. You should see &#8230;</p>
 <h3><b>Output:</b></h3>
 <pre class="sample">$ git revert HEAD --no-edit
-[master dfdec6d] Revert "Oops, we didn't want this commit"
+[master 24e2477] Revert "Oops, we didn't want this commit"
  1 file changed, 1 insertion(+), 1 deletion(-)
 </pre>
 <p>Since we were undoing the very last commit we made, we were able to use <code>HEAD</code> as the argument to revert.  We can revert any arbitrary commit earlier in history by simply specifying its hash value.</p>
@@ -129,16 +131,16 @@ git commit -m "Oops, we didn't want this commit"</pre>
 <pre class="instructions">git hist</pre>
 <h3><b>Output:</b></h3>
 <pre class="sample">$ git hist
-* dfdec6d 2018-08-20 | Revert "Oops, we didn't want this commit" (HEAD -&gt; master) [Jim Weirich]
-* 9fe51d9 2018-08-20 | Oops, we didn't want this commit [Jim Weirich]
-* 64bc643 2018-08-20 | Added a comment (tag: v1) [Jim Weirich]
-* 3a51456 2018-08-20 | Added a default value (tag: v1-beta) [Jim Weirich]
-* f3c7796 2018-08-20 | Using ARGV [Jim Weirich]
-* 649c22e 2018-08-20 | First Commit [Jim Weirich]</pre>
+* 24e2477 2018-08-20 | Revert "Oops, we didn't want this commit" (HEAD -&gt; master) [Jim Weirich]
+* e8df329 2018-08-20 | Oops, we didn't want this commit [Jim Weirich]
+* 24422e5 2018-08-20 | Added a comment (tag: v1) [Jim Weirich]
+* 4b31f11 2018-08-20 | Added a default value (tag: v1-beta) [Jim Weirich]
+* 398a1fb 2018-08-20 | Using ARGV [Jim Weirich]
+* abf3d54 2018-08-20 | First Commit [Jim Weirich]</pre>
 <p>This technique will work with any commit (although you may have to resolve conflicts).  It is safe to use even on branches that are publicly shared on remote repositories.</p>
 <h2>Up Next</h2>
 <p>Next, let&#8217;s look at a technique that can be used to remove the most recent commits from the repository history.</p>
-      <nav class="foot-navigation">
+        <nav class="foot-navigation">
       <a href="lab_15.html">
       <svg version="1.1" width="36" height="36" viewBox="0 0 36 36" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M27.66,15.61,18,6,8.34,15.61A1,1,0,1,0,9.75,17L17,9.81V28.94a1,1,0,1,0,2,0V9.81L26.25,17a1,1,0,0,0,1.41-1.42Z"></path></svg>
       Previous
@@ -150,7 +152,7 @@ git commit -m "Oops, we didn't want this commit"</pre>
     </a>
   </nav>
 
+      </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>

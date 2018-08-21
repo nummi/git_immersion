@@ -1,39 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Lab 32 - Git Immersion</title>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" media="screen" href="reset.css"> 
-  <link rel="stylesheet" media="screen" href="screen.css"> 
-  <script type="text/javascript">
-   var _gaq = _gaq || [];
-   _gaq.push(['_setAccount', 'UA-1142510-7']);
-   _gaq.push(['_trackPageview']);
-   (function() {
-     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-   })();
-  </script>
-  <script type="text/javascript" src="UI.js"></script>
-</head>
+  <head>
+    <title>Lab 32 - Git Immersion</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A guided tour that walks through the fundamentals of Git">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" media="screen" href="reset.css"> 
+    <link rel="stylesheet" media="screen" href="screen.css"> 
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-1142510-7']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <script type="text/javascript" src="UI.js"></script>
+  </head>
 
-<body data-lab-id="32">
-  <a href="#content" tabindex="1" class="skip-to-content">
-    Skip to content
-  </a>
+  <body data-lab-id="32">
+    <a href="#content" tabindex="1" class="skip-to-content">
+      Skip to content
+    </a>
 
-  <div class="layout">
-    <div id="index">
-      <p class="link-home">
-        <a href="index.html"><span>Git Immersion</span></a>
-      </p>
-      <button class="link-menu">Menu</button>
-      <nav tabindex="0">
-        <ol>
-            <li id="lab_1_link"><a href="lab_01.html">Setup</a></li>
+    <div class="layout">
+      <div id="index">
+        <p class="link-home">
+          <a href="index.html"><span>Git Immersion</span></a>
+        </p>
+        <button class="link-menu">Menu</button>
+        <nav tabindex="0">
+          <ol>
+              <li id="lab_1_link"><a href="lab_01.html">Setup</a></li>
   <li id="lab_2_link"><a href="lab_02.html">More Setup</a></li>
   <li id="lab_3_link"><a href="lab_03.html">Create a Project</a></li>
   <li id="lab_4_link"><a href="lab_04.html">Checking Status</a></li>
@@ -87,12 +89,12 @@
   <li id="lab_52_link"><a href="lab_52.html">Advanced / Future Topics</a></li>
   <li id="lab_53_link"><a href="lab_53.html">Thank You</a></li>
 
-        </ol>
-      </nav>
-    </div>
+          </ol>
+        </nav>
+      </div>
 
-    <div id="content">
-      <h1 class="lab_title"><em>lab 32</em>  Resetting the Greet Branch</h1>
+      <div id="content">
+        <h1 class="lab_title"><em>lab 32</em>  Resetting the Greet Branch</h1>
 <h2>Goals</h2>
 <ul>
 	<li>Reset the greet branch to the point before the first merge.</li>
@@ -107,30 +109,30 @@ git hist</pre>
 <pre class="sample">$ git checkout greet
 Already on 'greet'
 $ git hist
-*   085ba77 2018-08-20 | Merged master fixed conflict. (HEAD -&gt; greet) [Jim Weirich]
+*   43b1a38 2018-08-20 | Merged master fixed conflict. (HEAD -&gt; greet) [Jim Weirich]
 |\  
-| * d3c396c 2018-08-20 | Made interactive (master) [Jim Weirich]
-* |   f7f48a6 2018-08-20 | Merge branch 'master' into greet [Jim Weirich]
+| * 62181b3 2018-08-20 | Made interactive (master) [Jim Weirich]
+* |   206601d 2018-08-20 | Merge branch 'master' into greet [Jim Weirich]
 |\ \  
 | |/  
-| * 51beac0 2018-08-20 | Added README [Jim Weirich]
-* | ad62ce4 2018-08-20 | Updated Rakefile [Jim Weirich]
-* | e0a8a6e 2018-08-20 | Hello uses Greeter [Jim Weirich]
-* | 5b16638 2018-08-20 | Added greeter class [Jim Weirich]
+| * b6b824b 2018-08-20 | Added README [Jim Weirich]
+* | 4bb6d09 2018-08-20 | Updated Rakefile [Jim Weirich]
+* | 35ab8b1 2018-08-20 | Hello uses Greeter [Jim Weirich]
+* | dcc06f6 2018-08-20 | Added greeter class [Jim Weirich]
 |/  
-* a3d2ca9 2018-08-20 | Added a Rakefile. [Jim Weirich]
-* 5b49d2b 2018-08-20 | Moved hello.rb to lib [Jim Weirich]
-* aaffad7 2018-08-20 | Add an author/email comment [Jim Weirich]
-* 64bc643 2018-08-20 | Added a comment (tag: v1) [Jim Weirich]
-* 3a51456 2018-08-20 | Added a default value (tag: v1-beta) [Jim Weirich]
-* f3c7796 2018-08-20 | Using ARGV [Jim Weirich]
-* 649c22e 2018-08-20 | First Commit [Jim Weirich]</pre>
+* c6bc1b2 2018-08-20 | Added a Rakefile. [Jim Weirich]
+* fb9f8cd 2018-08-20 | Moved hello.rb to lib [Jim Weirich]
+* 808b27c 2018-08-20 | Add an author/email comment [Jim Weirich]
+* 24422e5 2018-08-20 | Added a comment (tag: v1) [Jim Weirich]
+* 4b31f11 2018-08-20 | Added a default value (tag: v1-beta) [Jim Weirich]
+* 398a1fb 2018-08-20 | Using ARGV [Jim Weirich]
+* abf3d54 2018-08-20 | First Commit [Jim Weirich]</pre>
 <p>That&#8217;s a bit hard to read, but looking at the data we see that the &#8220;Updated Rakefile&#8221; commit was the last commit on the greet branch before merging.  Let&#8217;s reset the greet branch to that commit.</p>
 <h3><b>Execute:</b></h3>
 <pre class="instructions">git reset --hard &lt;hash&gt;</pre>
 <h3><b>Output:</b></h3>
-<pre class="sample">$ git reset --hard ad62ce4
-HEAD is now at ad62ce4 Updated Rakefile
+<pre class="sample">$ git reset --hard 4bb6d09
+HEAD is now at 4bb6d09 Updated Rakefile
 </pre>
 <h2>Check the branch.</h2>
 <p>Look at the log for the greet branch.  We no longer have the merge commits in its history.</p>
@@ -138,20 +140,20 @@ HEAD is now at ad62ce4 Updated Rakefile
 <pre class="instructions">git hist --all</pre>
 <h3><b>Output:</b></h3>
 <pre class="sample">$ git hist --all
-* d3c396c 2018-08-20 | Made interactive (master) [Jim Weirich]
-* 51beac0 2018-08-20 | Added README [Jim Weirich]
-| * ad62ce4 2018-08-20 | Updated Rakefile (HEAD -&gt; greet) [Jim Weirich]
-| * e0a8a6e 2018-08-20 | Hello uses Greeter [Jim Weirich]
-| * 5b16638 2018-08-20 | Added greeter class [Jim Weirich]
+* 62181b3 2018-08-20 | Made interactive (master) [Jim Weirich]
+* b6b824b 2018-08-20 | Added README [Jim Weirich]
+| * 4bb6d09 2018-08-20 | Updated Rakefile (HEAD -&gt; greet) [Jim Weirich]
+| * 35ab8b1 2018-08-20 | Hello uses Greeter [Jim Weirich]
+| * dcc06f6 2018-08-20 | Added greeter class [Jim Weirich]
 |/  
-* a3d2ca9 2018-08-20 | Added a Rakefile. [Jim Weirich]
-* 5b49d2b 2018-08-20 | Moved hello.rb to lib [Jim Weirich]
-* aaffad7 2018-08-20 | Add an author/email comment [Jim Weirich]
-* 64bc643 2018-08-20 | Added a comment (tag: v1) [Jim Weirich]
-* 3a51456 2018-08-20 | Added a default value (tag: v1-beta) [Jim Weirich]
-* f3c7796 2018-08-20 | Using ARGV [Jim Weirich]
-* 649c22e 2018-08-20 | First Commit [Jim Weirich]</pre>
-      <nav class="foot-navigation">
+* c6bc1b2 2018-08-20 | Added a Rakefile. [Jim Weirich]
+* fb9f8cd 2018-08-20 | Moved hello.rb to lib [Jim Weirich]
+* 808b27c 2018-08-20 | Add an author/email comment [Jim Weirich]
+* 24422e5 2018-08-20 | Added a comment (tag: v1) [Jim Weirich]
+* 4b31f11 2018-08-20 | Added a default value (tag: v1-beta) [Jim Weirich]
+* 398a1fb 2018-08-20 | Using ARGV [Jim Weirich]
+* abf3d54 2018-08-20 | First Commit [Jim Weirich]</pre>
+        <nav class="foot-navigation">
       <a href="lab_31.html">
       <svg version="1.1" width="36" height="36" viewBox="0 0 36 36" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M27.66,15.61,18,6,8.34,15.61A1,1,0,1,0,9.75,17L17,9.81V28.94a1,1,0,1,0,2,0V9.81L26.25,17a1,1,0,0,0,1.41-1.42Z"></path></svg>
       Previous
@@ -163,7 +165,7 @@ HEAD is now at ad62ce4 Updated Rakefile
     </a>
   </nav>
 
+      </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>

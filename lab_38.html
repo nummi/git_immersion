@@ -4,8 +4,9 @@
     <title>Lab 38 - Git Immersion</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 viewport-fit=cover"">
     <meta name="description" content="A guided tour that walks through the fundamentals of Git">
+    <meta name="theme-color" content="#0000ff">
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" media="screen" href="reset.css"> 
     <link rel="stylesheet" media="screen" href="screen.css"> 
@@ -93,7 +94,7 @@
         </nav>
       </div>
 
-      <div id="content">
+      <div id="content" tabindex="-1">
         <h1 class="lab_title"><em>lab 38</em>  Review the Cloned Repository</h1>
 <h2>Goals</h2>
 <ul>
@@ -117,17 +118,17 @@ lib
 <pre class="instructions">git hist --all</pre>
 <h3><b>Output:</b></h3>
 <pre class="sample">$ git hist --all
-* 4b8bac3 2018-08-20 | Updated Rakefile (HEAD -&gt; master, origin/master, origin/greet, origin/HEAD) [Jim Weirich]
-* d159f11 2018-08-20 | Hello uses Greeter [Jim Weirich]
-* 56bf680 2018-08-20 | Added greeter class [Jim Weirich]
-* b6b824b 2018-08-20 | Added README [Jim Weirich]
-* c6bc1b2 2018-08-20 | Added a Rakefile. [Jim Weirich]
-* fb9f8cd 2018-08-20 | Moved hello.rb to lib [Jim Weirich]
-* 808b27c 2018-08-20 | Add an author/email comment [Jim Weirich]
-* 24422e5 2018-08-20 | Added a comment (tag: v1) [Jim Weirich]
-* 4b31f11 2018-08-20 | Added a default value (tag: v1-beta) [Jim Weirich]
-* 398a1fb 2018-08-20 | Using ARGV [Jim Weirich]
-* abf3d54 2018-08-20 | First Commit [Jim Weirich]</pre>
+* 7f5e329 2018-09-05 | Updated Rakefile (HEAD -&gt; master, origin/master, origin/greet, origin/HEAD) [Jim Weirich]
+* a25f495 2018-09-05 | Hello uses Greeter [Jim Weirich]
+* 601fcb8 2018-09-05 | Added greeter class [Jim Weirich]
+* f8ae52c 2018-09-05 | Added README [Jim Weirich]
+* b472784 2018-09-05 | Added a Rakefile. [Jim Weirich]
+* 71d64ba 2018-09-05 | Moved hello.rb to lib [Jim Weirich]
+* cd9c8e2 2018-09-05 | Add an author/email comment [Jim Weirich]
+* 0023aae 2018-09-05 | Added a comment (tag: v1) [Jim Weirich]
+* b0232ea 2018-09-05 | Added a default value (tag: v1-beta) [Jim Weirich]
+* c846e14 2018-09-05 | Using ARGV [Jim Weirich]
+* 51db049 2018-09-05 | First Commit [Jim Weirich]</pre>
 <p>You should now see a list of the all the commits in the new repository, and it should (more or less) match the history of commits in the original repository.  The only difference should be in the names of the branches.</p>
 <h2>Remote branches</h2>
 <p>You should see a <strong>master</strong> branch (along with <strong><span class="caps">HEAD</span></strong>) in the history list.  But you will also have number of strangely named branches (<strong>origin/master</strong>, <strong>origin/greet</strong> and <strong>origin/<span class="caps">HEAD</span></strong>).  We&#8217;ll talk about them in a bit.</p>

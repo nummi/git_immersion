@@ -4,8 +4,9 @@
     <title>Lab 10 - Git Immersion</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 viewport-fit=cover"">
     <meta name="description" content="A guided tour that walks through the fundamentals of Git">
+    <meta name="theme-color" content="#0000ff">
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" media="screen" href="reset.css"> 
     <link rel="stylesheet" media="screen" href="screen.css"> 
@@ -93,7 +94,7 @@
         </nav>
       </div>
 
-      <div id="content">
+      <div id="content" tabindex="-1">
         <h1 class="lab_title"><em>lab 10</em>  History</h1>
 <h2>Goals</h2>
 <ul>
@@ -105,27 +106,27 @@
 <p>You should see &#8230;</p>
 <h3><b>Output:</b></h3>
 <pre class="sample">$ git log
-commit 24422e51af5d57ec9888f5e1500820c5e821bd1b
+commit 0023aae9367c1636ed4b06c4ea642b827b175671
 Author: Jim Weirich &lt;jim (at) edgecase.com&gt;
-Date:   Mon Aug 20 19:38:57 2018 -0700
+Date:   Wed Sep 5 16:26:54 2018 -0700
 
     Added a comment
 
-commit 4b31f1103dcbd13e86e22745157e6f9469d2e0aa
+commit b0232ea175db564e83db46867763a40510d42e41
 Author: Jim Weirich &lt;jim (at) edgecase.com&gt;
-Date:   Mon Aug 20 19:38:57 2018 -0700
+Date:   Wed Sep 5 16:26:54 2018 -0700
 
     Added a default value
 
-commit 398a1fb28bb2565b4d27bea9f6dd548dbe5562c0
+commit c846e146066fccfd1080394b317f5e68e4f98bcb
 Author: Jim Weirich &lt;jim (at) edgecase.com&gt;
-Date:   Mon Aug 20 19:38:56 2018 -0700
+Date:   Wed Sep 5 16:26:54 2018 -0700
 
     Using ARGV
 
-commit abf3d54892acb74e7ee2f93e6c82a5503e839002
+commit 51db049d3922a415f778539bf41e260200168cd8
 Author: Jim Weirich &lt;jim (at) edgecase.com&gt;
-Date:   Mon Aug 20 19:38:56 2018 -0700
+Date:   Wed Sep 5 16:26:53 2018 -0700
 
     First Commit
 </pre>
@@ -137,10 +138,10 @@ Date:   Mon Aug 20 19:38:56 2018 -0700
 <p>You should see &#8230;</p>
 <h3><b>Output:</b></h3>
 <pre class="sample">$ git log --pretty=oneline
-24422e51af5d57ec9888f5e1500820c5e821bd1b Added a comment
-4b31f1103dcbd13e86e22745157e6f9469d2e0aa Added a default value
-398a1fb28bb2565b4d27bea9f6dd548dbe5562c0 Using ARGV
-abf3d54892acb74e7ee2f93e6c82a5503e839002 First Commit
+0023aae9367c1636ed4b06c4ea642b827b175671 Added a comment
+b0232ea175db564e83db46867763a40510d42e41 Added a default value
+c846e146066fccfd1080394b317f5e68e4f98bcb Using ARGV
+51db049d3922a415f778539bf41e260200168cd8 First Commit
 </pre>
 <h2>Controlling Which Entries are Displayed</h2>
 <p>There are a lot of options for selecting which entries are displayed in the log.  Play around with the following options:</p>
@@ -160,10 +161,10 @@ git log --pretty=oneline --all</pre>
 <p>It looks like this:</p>
 <h3><b>Output:</b></h3>
 <pre class="sample">$ git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
-* 24422e5 2018-08-20 | Added a comment (HEAD -&gt; master) [Jim Weirich]
-* 4b31f11 2018-08-20 | Added a default value [Jim Weirich]
-* 398a1fb 2018-08-20 | Using ARGV [Jim Weirich]
-* abf3d54 2018-08-20 | First Commit [Jim Weirich]</pre>
+* 0023aae 2018-09-05 | Added a comment (HEAD -&gt; master) [Jim Weirich]
+* b0232ea 2018-09-05 | Added a default value [Jim Weirich]
+* c846e14 2018-09-05 | Using ARGV [Jim Weirich]
+* 51db049 2018-09-05 | First Commit [Jim Weirich]</pre>
 <p>Let&#8217;s look at it in detail:</p>
 <ul>
 	<li><code>--pretty="..."</code> defines the format of the output.</li>

@@ -4,8 +4,9 @@
     <title>Lab 28 - Git Immersion</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 viewport-fit=cover"">
     <meta name="description" content="A guided tour that walks through the fundamentals of Git">
+    <meta name="theme-color" content="#0000ff">
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" media="screen" href="reset.css"> 
     <link rel="stylesheet" media="screen" href="screen.css"> 
@@ -93,7 +94,7 @@
         </nav>
       </div>
 
-      <div id="content">
+      <div id="content" tabindex="-1">
         <h1 class="lab_title"><em>lab 28</em>  Merging</h1>
 <h2>Goals</h2>
 <ul>
@@ -114,20 +115,20 @@ Merge made by the 'recursive' strategy.
  1 file changed, 1 insertion(+)
  create mode 100644 README
 $ git hist --all
-*   206601d 2018-08-20 | Merge branch 'master' into greet (HEAD -&gt; greet) [Jim Weirich]
+*   1b15f25 2018-09-05 | Merge branch 'master' into greet (HEAD -&gt; greet) [Jim Weirich]
 |\  
-| * b6b824b 2018-08-20 | Added README (master) [Jim Weirich]
-* | 4bb6d09 2018-08-20 | Updated Rakefile [Jim Weirich]
-* | 35ab8b1 2018-08-20 | Hello uses Greeter [Jim Weirich]
-* | dcc06f6 2018-08-20 | Added greeter class [Jim Weirich]
+| * f8ae52c 2018-09-05 | Added README (master) [Jim Weirich]
+* | ade6d88 2018-09-05 | Updated Rakefile [Jim Weirich]
+* | f53cbbb 2018-09-05 | Hello uses Greeter [Jim Weirich]
+* | 1b8e8fc 2018-09-05 | Added greeter class [Jim Weirich]
 |/  
-* c6bc1b2 2018-08-20 | Added a Rakefile. [Jim Weirich]
-* fb9f8cd 2018-08-20 | Moved hello.rb to lib [Jim Weirich]
-* 808b27c 2018-08-20 | Add an author/email comment [Jim Weirich]
-* 24422e5 2018-08-20 | Added a comment (tag: v1) [Jim Weirich]
-* 4b31f11 2018-08-20 | Added a default value (tag: v1-beta) [Jim Weirich]
-* 398a1fb 2018-08-20 | Using ARGV [Jim Weirich]
-* abf3d54 2018-08-20 | First Commit [Jim Weirich]</pre>
+* b472784 2018-09-05 | Added a Rakefile. [Jim Weirich]
+* 71d64ba 2018-09-05 | Moved hello.rb to lib [Jim Weirich]
+* cd9c8e2 2018-09-05 | Add an author/email comment [Jim Weirich]
+* 0023aae 2018-09-05 | Added a comment (tag: v1) [Jim Weirich]
+* b0232ea 2018-09-05 | Added a default value (tag: v1-beta) [Jim Weirich]
+* c846e14 2018-09-05 | Using ARGV [Jim Weirich]
+* 51db049 2018-09-05 | First Commit [Jim Weirich]</pre>
 <p>By merging master into your greet branch periodically, you can pick up any changes to master and keep your changes in greet compatible with changes in the mainline.</p>
 <p>However, it does produce ugly commit graphs. Later we will look at the option of rebasing rather than merging.</p>
 <h2>Up Next</h2>

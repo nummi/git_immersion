@@ -20,6 +20,7 @@
 
 .layout {
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
   height: 100vh;
 }
 
@@ -30,6 +31,7 @@
 #index {
   position: relative;
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
   padding: 0;
   background-color: #eee;
   counter-reset: nav-counter;
@@ -156,6 +158,7 @@
 #content {
   position: relative;
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
   padding: 2rem 2rem 0 2rem;
   padding-left: calc(2rem + env(safe-area-inset-left));
   padding-right: calc(2rem + env(safe-area-inset-right));
